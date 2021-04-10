@@ -46,8 +46,10 @@ export function ReposotoryList() {
             <ul>
                 {repositories.map(repository => {
                     return (
+                        <div className="Card-repository" key={repository.id}>
 
-                        <RepositoryItem key={repository.id} repository={repository} name={user?.name} />
+                            <RepositoryItem  repository={repository} name={user?.name} />
+                        </div>
                     )
 
                 })}

@@ -1,4 +1,3 @@
-
 // TIPAGEM
 interface RepositoryItemProps {
     repository: {
@@ -18,9 +17,11 @@ export function RepositoryItem(props: RepositoryItemProps) {
         <li>
             <p><strong>{props.repository?.name ?? 'Default'}</strong></p>
             <p><strong>Autor:</strong><i> {props.name ?? 'Não informado'}</i></p>
-            <p>{props.repository?.description ?? "Sem descrição"}</p>
-            <a href={props.repository?.html_url ?? "#"} target="_blank">
-                {props.repository?.html_url ? "Acessar repositorio" : "Sem link"}
+            <p className="description">{props.repository?.description ?? "Sem descrição"}</p>
+            <a href={props.repository?.html_url ?? "#"} target="_blank" >
+                <button className="btn-card" type="button">
+                    {props.repository?.html_url ? "Acessar repositorio" : "Sem link"}
+                </button>
             </a>
         </li>
 
