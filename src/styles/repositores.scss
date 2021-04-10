@@ -13,7 +13,6 @@ section.repository-list {
         list-style: none;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        // gap: 30px;
         row-gap: 30px;
         column-gap: 30px;
 
@@ -24,7 +23,7 @@ section.repository-list {
             border: 1px solid #999;
             border-radius: 10px;
             box-shadow: 0 5px 20px #999;
-            height: 300px;
+            height: 400px;
             padding: 20px 5%;
 
 
@@ -53,7 +52,8 @@ section.repository-list {
                 }
 
                 &.description {
-                    height: 150px;
+                    height: 350px;
+                    margin-bottom: 30px;
                     overflow-y: scroll;
                     scrollbar-width: none;
                     /* Firefox */
@@ -86,7 +86,7 @@ section.repository-list {
                     font-size: 15px;
                     cursor: pointer;
                     background: none;
-                    margin: 0 20px;
+                    margin: 0 5%;
                     border: 2px solid green;
                     border-radius: 10px;
                     cursor: pointer;
@@ -107,6 +107,17 @@ section.repository-list {
         }
 
     }
+
+    .group-button {
+        margin: 50px auto 0px;
+        width: 80%;
+        display: flex;
+
+        .counter {
+            flex: 1;
+            margin: 0 auto;
+        }
+    }
 }
 
 li.counter {
@@ -124,8 +135,6 @@ li.counter {
 
 
         button.btn-card {
-            // position: relative;
-            // bottom: 10px;
             width: 80%;
             height: 50px;
             display: flex;
@@ -151,4 +160,34 @@ li.counter {
             }
         }
     }
+}
+
+@media (min-width:300px) and (max-width:600px) {
+    section.repository-list {
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 30px;
+            column-gap: 30px;
+
+        }
+    }
+
+}
+
+@media (min-width:601px) and (max-width:1000px) {
+    section.repository-list {
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 30px;
+            column-gap: 30px;
+
+        }
+    }
+
 }

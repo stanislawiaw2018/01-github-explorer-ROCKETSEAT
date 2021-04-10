@@ -20,7 +20,7 @@ export function RepositoryItem(props: RepositoryItemProps) {
             <p className="description">{props.repository?.description ?? "Sem descrição"}</p>
             <a href={props.repository?.html_url ?? "#"} target="_blank" >
                 <button className="btn-card" type="button">
-                    {props.repository?.html_url ? "Acessar repositorio" : "Sem link"}
+                    {props.repository?.html_url ? "Acessar repositório" : "Sem link"}
                 </button>
             </a>
         </li>

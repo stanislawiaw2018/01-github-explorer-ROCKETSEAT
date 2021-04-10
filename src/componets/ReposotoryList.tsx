@@ -48,14 +48,17 @@ export function ReposotoryList() {
                     return (
                         <div className="Card-repository" key={repository.id}>
 
-                            <RepositoryItem  repository={repository} name={user?.name} />
+                            <RepositoryItem repository={repository} name={user?.name} />
                         </div>
                     )
 
                 })}
 
-                <Counter />
             </ul>
+            <div className="group-button">
+                <Counter />
+
+            </div>
         </section>
     )
 }
